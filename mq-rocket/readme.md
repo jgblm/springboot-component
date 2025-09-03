@@ -4,11 +4,12 @@
 3. 也可以通过proxy也访问rocketmq，如此不需要对外暴露broker和nameserver和端口。
 
 ## 使用rocketmq注意事项
-1. 使用rocketmq时，需要手动创建topic
-2. application.yml中绑定名称的限制来自Spring Cloud Stream的函数式编程模型
+1. 使用rocketmq时，需要手动创建topic。
+2. 除了DLQ（死信队列）topic，其他情况下group不是强制要求的。
+2. application.yml中绑定名称的限制来自Spring Cloud Stream的函数式编程模型。
   - 输入绑定：{functionName}-in-{index}
   - 输出绑定：{functionName}-out-{index}
   - index为输入或输出参数的位置，默认为0
-3. producer的两种编程模型
+3. producer的两种编程模型：
   - Spring Cloud Stream的函数式编程模型(需要function.definition) Spring Cloud Stream自动管理消息发送，基于函数返回值
   - StreamBridge Producer：通过编程方式手动控制消息发送时机和内容，只需要配置对应的绑定即可
