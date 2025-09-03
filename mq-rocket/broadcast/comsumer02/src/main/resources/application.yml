@@ -1,0 +1,22 @@
+server:
+  port: 28083
+
+spring:
+  application:
+    name: rocket-consumer-02
+  cloud:
+    stream:
+      function:
+        definition: consumer;
+      rocketmq:
+        binder:
+          name-server: localhost:9876
+        bindings:
+          # 命名格式必须是 {functionName}-in-{index}  index=0 表示第一个参数或者输出
+          consumer-in-0:
+            consumer:
+              messageModel: BROADCASTING
+      bindings:
+        consumer-in-0:
+          destination: MyTopic
+          group: broadcast-consumer
