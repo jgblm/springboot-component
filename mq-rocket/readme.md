@@ -13,3 +13,4 @@
 3. producer的两种编程模型：
   - Spring Cloud Stream的函数式编程模型(需要function.definition) Spring Cloud Stream自动管理消息发送，基于函数返回值
   - StreamBridge Producer：通过编程方式手动控制消息发送时机和内容，只需要配置对应的绑定即可
+4. broker.conf中配置`enablePropertyFilter=true`后，才能支持subscription sql
