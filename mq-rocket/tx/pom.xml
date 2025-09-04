@@ -5,34 +5,23 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>top.jgblm</groupId>
-        <artifactId>springboot-component</artifactId>
+        <artifactId>mq-rocket</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>mq-rocket</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>broadcast/producer01</module>
-        <module>common</module>
-        <module>broadcast/comsumer01</module>
-        <module>broadcast/comsumer02</module>
-        <module>delay</module>
-        <module>order</module>
-        <module>poll</module>
-        <module>subscription-sql</module>
-        <module>tx</module>
-    </modules>
+    <artifactId>mq-rocket-tx</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <dependencies>
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-stream-rocketmq</artifactId>
+            <groupId>top.jgblm</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
