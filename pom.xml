@@ -8,9 +8,7 @@
     <packaging>pom</packaging>
     <name>springboot-component</name>
     <description>springboot-component</description>
-    <modules>
-        <module>mq-rocket</module>
-    </modules>
+
 
     <properties>
         <java.version>21</java.version>
@@ -19,25 +17,6 @@
     </properties>
     <dependencies>
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${alibaba-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <repositories>
         <repository>
