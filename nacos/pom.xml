@@ -20,6 +20,7 @@
     <modules>
         <module>nacos-config</module>
         <module>gateway</module>
+        <module>sidecar</module>
     </modules>
 
     <dependencyManagement>
